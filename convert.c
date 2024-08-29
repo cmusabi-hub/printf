@@ -1,7 +1,6 @@
 #include "printf.h"
 /**
- * converT - converts output to binary, base 10, octal or
- * hexadecimal with capital letter
+ * convert - converts output to binary, base 10, octal or hexadecimal
  * @num: number to be converted
  * @base: base to be adjusted
  * Return: pointer to the address of the converted number.
