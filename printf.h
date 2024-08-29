@@ -10,6 +10,7 @@ int print_int(va_list args);
 int print_octal(va_list args);
 int print_string(va_list args);
 int print_hex(va_list args);
+int print_heX(va_list args);
 
 typedef struct format_specifier {
 	char specifier;
@@ -21,7 +22,8 @@ formatters[] = {
 	{'d', print_int},
 	{'o', print_octal},
 	{'s', print_string},
-	{'c', print_hex},
+	{'x', print_hex},
+	{'X', print_X},
 	{'\0', NULL}
 };
 
