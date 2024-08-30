@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 	int iter_1, iter_0;
-	unsigned int num_char;
+	unsigned int num_char, printed_chars = 0;
 	va_list arg;
 	va_start(arg, format);
 
@@ -25,13 +25,14 @@ int _printf(const char *format, ...)
 			for (iter_1 = 0; formatters_functions[iter_1].format != '\0'; iter_1++)
 			{
 				formatters[iter_1].func(arg);
-				num_char = formatters[iter_1].func(arg); 
+				num_char = formatters[iter_1].func(arg, format[iter_0]);
+				printed_chars += num_char;
 				break;
 			}
 		}
 
 	}
 	va_end(arg);
-	return(num_char);
+	return(printed_chars);
 }
 
