@@ -19,6 +19,7 @@ typedef struct format_specifier {
 formatters[] = {
 	{'c', print_char},
 	{'d', print_int},
+	{'i', print_int}.
 	{'o', print_octal},
 	{'s', print_string},
 	{'x', print_hex},
