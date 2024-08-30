@@ -4,6 +4,12 @@
  */
 int print_char(va_list args)
 {
+
+	unsigned int return_val = 0,  code = va_arg(args, int);
+	_putchar(code);
+	return_val++;
+	break;
+	return(return_val);
 }
 
 /**
