@@ -6,14 +6,14 @@
 int _printf(const char *format, ...);
 int convert(unsigned int, int);
 int print_char(va_list args);
-int print_int(va_list args);
+int print_int(va_list args, char format);
 int print_octal(va_list args);
 int print_string(va_list args);
 int print_hex(va_list args);
 
 typedef struct format_specifier {
 	char specifier;
-	int (*func)(va_list);
+	int (*func)(va_list, char);
 }formatters;
 
 formatters  formatters_functions[] = {
