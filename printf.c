@@ -21,8 +21,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			iter++;
-			for (iter_1 = 0; formatters[iter_1].format != '\0'; iter_1++)
+			iter_0++;
+			for (iter_1 = 0; formatters_functions[iter_1].format != '\0'; iter_1++)
 			{
 				formatters[iter_1].func(arg);
 				num_char = formatters[iter_1].func(arg); 
