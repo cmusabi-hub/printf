@@ -14,9 +14,9 @@ int print_hex(va_list args);
 typedef struct format_specifier {
 	char specifier;
 	int (*func)(va_list);
-} formatters;
+}formatters;
 
-formatters[] = {
+formatters  formatters_functions[] = {
 	{'c', print_char},
 	{'d', print_int},
 	{'i', print_int}.
